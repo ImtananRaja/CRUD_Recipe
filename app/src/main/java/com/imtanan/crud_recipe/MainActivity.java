@@ -45,10 +45,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //Adding an employee
     private void addEmployee(){
 
-        final String name = editTextName.getText().toString().trim();
-        final String origin = editTextName.getText().toString().trim();
-        final String ingre = editTextIngre.getText().toString().trim();
-        final String cm = editTextCM.getText().toString().trim();
+        final String name = editTextName.getText().toString().toLowerCase().trim();
+        final String origin = editTextName.getText().toString().toLowerCase().trim();
+        final String ingre = editTextIngre.getText().toString().toLowerCase().trim();
+        final String cm = editTextCM.getText().toString().toLowerCase().trim();
 
         class AddEmployee extends AsyncTask<Void,Void,String>{
 

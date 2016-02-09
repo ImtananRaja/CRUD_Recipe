@@ -107,10 +107,10 @@ public class ViewRecipe extends AppCompatActivity implements View.OnClickListene
 
 
     private void updateEmployee() {
-        final String name = editTextName.getText().toString().trim();
-        final String origin = editTextOrigin.getText().toString().trim();
-        final String ingre = editTextIngre.getText().toString().trim();
-        final String cm = editTextCM.getText().toString().trim();
+        final String name = editTextName.getText().toString().toLowerCase().trim();
+        final String origin = editTextOrigin.getText().toString().toLowerCase().trim();
+        final String ingre = editTextIngre.getText().toString().toLowerCase().trim();
+        final String cm = editTextCM.getText().toString().toLowerCase().trim();
 
         class UpdateEmployee extends AsyncTask<Void, Void, String> {
             ProgressDialog loading;
@@ -180,7 +180,7 @@ public class ViewRecipe extends AppCompatActivity implements View.OnClickListene
 
     private void confirmDeleteEmployee() {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        alertDialogBuilder.setMessage("Are you sure you want to delete this employee?");
+        alertDialogBuilder.setMessage("Are you sure you want to delete this recipe?");
 
         alertDialogBuilder.setPositiveButton("Yes",
                 new DialogInterface.OnClickListener() {
