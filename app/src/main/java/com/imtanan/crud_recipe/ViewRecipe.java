@@ -27,7 +27,7 @@ public class ViewRecipe extends AppCompatActivity implements View.OnClickListene
     private EditText editTextCM;
 
     private Button buttonUpdate;
-    private Button buttonDelete;
+   // private Button buttonDelete;
 
     private String id;
 
@@ -47,10 +47,10 @@ public class ViewRecipe extends AppCompatActivity implements View.OnClickListene
         editTextCM = (EditText) findViewById(R.id.editTextCM);
 
         buttonUpdate = (Button) findViewById(R.id.buttonUpdate);
-        buttonDelete = (Button) findViewById(R.id.buttonDelete);
+       // buttonDelete = (Button) findViewById(R.id.buttonDelete);
 
         buttonUpdate.setOnClickListener(this);
-        buttonDelete.setOnClickListener(this);
+        //buttonDelete.setOnClickListener(this);
 
         editTextId.setText(id);
 
@@ -148,7 +148,7 @@ public class ViewRecipe extends AppCompatActivity implements View.OnClickListene
         UpdateEmployee ue = new UpdateEmployee();
         ue.execute();
     }
-
+/*
     private void deleteEmployee() {
         class DeleteEmployee extends AsyncTask<Void, Void, String> {
             ProgressDialog loading;
@@ -202,15 +202,15 @@ public class ViewRecipe extends AppCompatActivity implements View.OnClickListene
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
     }
-
+*/
     @Override
     public void onClick(View v) {
         if (v == buttonUpdate) {
             updateEmployee();
         }
 
-        if (v == buttonDelete) {
+       /* if (v == buttonDelete) {
             confirmDeleteEmployee();
-        }
+        }*/
     }
 }
